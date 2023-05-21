@@ -3,7 +3,7 @@ import React, { useState,useContext } from 'react';
 import Logo from '../../olx-logo.png';
 import './Signup.css';
 import { firebaseContext } from '../../store/firebaseContext';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 
 export default function Signup() {
@@ -33,9 +33,9 @@ export default function Signup() {
   return (
     <div>
       <div className="signupParentDiv">
-        <img width="200px" height="200px" src={Logo} alt='logo'></img>
+        <img width="200px" height="200px" src='https://logos-world.net/wp-content/uploads/2022/04/OLX-Logo.png' alt='logo'></img>
         <form onClick={handleSubmit}>
-          <label htmlFor="fname">Username</label>
+          
           <br />
           <input
             className="input"
@@ -44,10 +44,10 @@ export default function Signup() {
             type="text"
             id="fname"
             name="name"
-            defaultValue="John"
+           placeholder='username'
           />
           <br />
-          <label htmlFor="fname">Email</label>
+          
           <br />
           <input
             className="input"
@@ -56,10 +56,10 @@ export default function Signup() {
             type="email"
             id="fname"
             name="email"
-            defaultValue="John"
+            placeholder='Email'
           />
           <br />
-          <label htmlFor="lname">Phone</label>
+          
           <br />
           <input
             className="input"
@@ -68,10 +68,10 @@ export default function Signup() {
             type="number"
             id="lname"
             name="phone"
-            defaultValue="Doe"
+            placeholder='Phone'
           />
           <br />
-          <label htmlFor="lname">Password</label>
+          
           <br />
           <input
             className="input"
@@ -80,13 +80,22 @@ export default function Signup() {
             type="password"
             id="lname"
             name="password"
-            defaultValue="Doe"
+            placeholder='Password'
           />
           <br />
           <br />
           <button>Signup</button>
         </form>
-        <p>Login</p>
+        <div className='already-acc'>
+        
+          Already a member? 
+          
+        </div>
+        <div className='login-link'>
+        <Link to="/login" > 
+               Login
+          </Link>
+        </div>
       </div>
     </div>
   );

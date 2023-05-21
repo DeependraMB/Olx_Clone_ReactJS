@@ -15,7 +15,7 @@
 
 .placeSearch {
   width: 16em;
-  height: 48px;
+  height: 42px;
   display: flex;
   align-items: center;
   padding: 0 8px;
@@ -33,11 +33,14 @@
   border-color: transparent;
   outline-color: transparent;
 }
+.placeSearch:hover {
+  border-color: #23e5db;
+}
 
 .productSearch {
   width: 35em;
-  height: 48px;
-  border: 2px solid #002f34;
+  height: 42px;
+  border: 3px solid #002f34;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -62,7 +65,7 @@
 
 .productSearch .searchAction {
   min-width: 48px;
-  height: 48px;
+  height: 42px;
   position: relative;
   display: flex;
   cursor: pointer;
@@ -76,6 +79,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   fill: white;
+}
+.productSearch:hover{
+  border-color: #23e5db;
 }
 
 .language {
@@ -119,6 +125,7 @@
 .sellMenu {
   position: relative;
   cursor: pointer;
+  margin-right: 30px;
 }
 
 .sellMenu .all {
@@ -154,6 +161,15 @@
 .sellMenu .sellMenuContent span {
   margin-left: 5px;
 }
+.sellButton {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+.sellButton:hover {
+  text-decoration: none;
+  color: black;
+}
 
 @media only screen and (max-width: 700px) {
   .placeSearch,
@@ -161,4 +177,15 @@
   .sellMenu {
     display: none;
   }
+}
+
+.navLogin {
+  cursor: pointer;
+  font-size: medium;
+  font-weight: 600;
+  text-decoration:underline;
+}
+.navLogin:hover{
+  color: hwb(177 0% 20%);
+  text-decoration: none;
 }

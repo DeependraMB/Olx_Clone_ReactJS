@@ -1,12 +1,15 @@
+
+
 .centerDiv {
     border: 1px solid black;
     width: max-content;
     padding: 50px;
     position: absolute;
-    top: 65%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 6px;
+    
   }
   .input {
     border-top-color: transparent;

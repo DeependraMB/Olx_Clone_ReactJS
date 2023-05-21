@@ -3,7 +3,7 @@ import React, { useState,useContext } from 'react';
 import Logo from '../../olx-logo.png';
 import './Login.css';
 import { firebaseContext } from '../../store/firebaseContext';
-import { useHistory } from 'react-router-dom';
+import { useHistory,Link } from 'react-router-dom';
 
 function Login() {
   const history = useHistory()
@@ -16,15 +16,15 @@ function Login() {
     Firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
       history.push('/')
     }).catch((error)=>{
-      alert(error.message)
+      
     })
   }
   return (
     <div>
       <div className="loginParentDiv">
-        <img width="200px" height="200px" src={Logo}></img>
+        <img width="200px" height="200px" src='https://logos-world.net/wp-content/uploads/2022/04/OLX-Logo.png'></img>
         <form onClick={handleLogin}>
-          <label htmlFor="fname">Email</label>
+          
           <br />
           <input
             className="input"
@@ -33,10 +33,11 @@ function Login() {
             type="email"
             id="fname"
             name="email"
-            defaultValue="John"
+            placeholder='Email'
+
           />
           <br />
-          <label htmlFor="lname">Password</label>
+          
           <br />
           <input
             className="input"
@@ -45,13 +46,18 @@ function Login() {
             type="password"
             id="lname"
             name="password"
-            defaultValue="Doe"
+            placeholder='Password'
           />
           <br />
           <br />
           <button>Login</button>
         </form>
-        <a>Signup</a>
+        <div className='no-account'>
+           Don't have an account?       
+        </div>
+        <div className='signup-link-in-form'>
+           <Link   to="/signup">SignUp</Link>
+        </div>
       </div>
     </div>
   );

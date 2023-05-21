@@ -1,19 +1,37 @@
+
+
 .loginParentDiv {
     border: 1px solid black;
-    width: max-content;
+    width: 388px;
     padding: 10px;
+    height: 580px;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 6px;
+    background-color: #ffff;
   }
-  
+  .loginParentDiv form {
+    margin-top: 30px;
+    background-color: #ffff;
+  }
+  .loginParentDiv img {
+    background-color: #ffff;
+    height: fit-content;
+    padding-top: 30px;
+    margin: auto;
+    display: block;
+    color: black;
+  }
   .loginParentDiv .input {
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    outline-color: transparent;
+    border: solid 1px black;
+    height: 50px;
+    width: 95%;
+    display: block;
+    margin: auto;
   }
   
   .loginParentDiv button {
@@ -36,3 +54,23 @@
     cursor: pointer;
   }
   
+  .no-account {
+    float: left;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-right: 0px;
+    padding-left: 4px;
+  }
+  .signup-link-in-form {
+    margin-top: 40px;
+    text-decoration: 2px solid underline;
+    font-size: 17px;
+   text-decoration: none;
+    font-weight: 650;
+    color: black;
+  }
+  .signup-link-in-form:hover {
+    color: aqua;
+  }

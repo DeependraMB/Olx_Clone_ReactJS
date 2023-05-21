@@ -24,7 +24,34 @@
 }
 
 .recommendations .cards {
-  display: flex;
+  left: 5%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 270px);
+  grid-template-rows: repeat(5, relative);
+  margin-right: 0%;
+  
+  
+}
+.recommendations .cards .card {
+  
+  margin-top: 20px;
+  height: 314px;
+  width: calc(25%-7px);
+  max-width: 390px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding-left: 20px;
+  object-fit: fill;
+  
+  box-shadow : rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, 
+                rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+}
+.recommendations .cards .card image {
+  justify-content: stretch;
+  object-fit: fill;
+  width: 100%;
 }
 
 .moreView .cards {

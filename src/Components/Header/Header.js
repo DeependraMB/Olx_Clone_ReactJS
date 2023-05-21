@@ -7,7 +7,8 @@ import Arrow from '../../assets/Arrow';
 import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
 import { authContext, firebaseContext } from '../../store/firebaseContext';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import Avatar from '../Avatar/Avatar';
 function Header() {
   const history = useHistory();
   const {user} =useContext(authContext)
@@ -38,19 +39,15 @@ function Header() {
           <span> ENGLISH </span>
           <Arrow></Arrow>
         </div>
-        <div className="loginPage">
-          <span>{user ? `Welcome ${user.displayName}` : 'Login'}</span>
-          <hr />
-        </div>
-        {user && <span onClick={()=>{
-          Firebase.auth().signOut();
-          history.push("/login")
-        }}>LogOut</span>}
-        <div className="sellMenu">
+        {
+        user ? <Avatar/> : <span className='navLogin' onClick={()=>{history.push("/login")}}>Login</span>
+        }
+       
+        <div className="sellMenu" >
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
-            <span>SELL</span>
+            <Link className='sellButton' to="/create">SELL</Link>
           </div>
         </div>
       </div>
